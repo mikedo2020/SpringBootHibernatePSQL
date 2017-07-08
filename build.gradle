@@ -1,0 +1,58 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath(
+                'org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE',
+                'org.unbroken-dome.gradle-plugins:gradle-testsets-plugin:1.0.2'
+        )
+    }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+
+
+dependencies {
+    compile(
+            'org.codehaus.groovy:groovy-all:2.4.0',
+            'org.springframework.boot:spring-boot-starter-actuator',
+            'org.springframework.boot:spring-boot-starter-thymeleaf',
+            'org.springframework.boot:spring-boot-starter-web',
+            'org.springframework.boot:spring-boot-starter-tomcat',
+            'org.hibernate:hibernate-entitymanager:4.2.15.Final',
+            'org.postgresql:postgresql:9.3-1102-jdbc41',
+            'javax.persistence:persistence-api:1.0.2',
+            'log4j:log4j:1.2.17',
+            'org.json:json:20170516',
+            'org.springframework:spring-web:4.3.9.RELEASE',
+            'com.fasterxml.jackson.core:jackson-core:2.5.0'
+
+    )
+    testCompile(
+            'com.nitorcreations:junit-runners:1.2',
+            'org.springframework.boot:spring-boot-starter-test'
+    )
+}
+
+
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes('Main-Class': 'com.forex.ForexApplication')
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
