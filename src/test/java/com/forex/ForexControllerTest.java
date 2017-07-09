@@ -19,7 +19,7 @@ public class ForexControllerTest {
 
     @Before
     public void setUp() {
-        mockMvc = MockMvcBuilders.standaloneSetup(new ForexController())
+        mockMvc = MockMvcBuilders.standaloneSetup(new MainController())
                 .build();
     }
 

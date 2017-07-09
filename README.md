@@ -10,7 +10,7 @@ docker run --name some-postgres -e POSTGRES_PASSWORD=mypassword -d -p 5432:5432 
 
     gradle bootRun
     
-# Go to the application to see welcome page
+# Go to the application to see index page
 
     http://localhost:8080
 
