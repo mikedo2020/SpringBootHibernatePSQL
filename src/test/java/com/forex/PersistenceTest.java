@@ -23,11 +23,12 @@ public class PersistenceTest extends TestCase {
     public void testInsert(){
 
 
+        /*
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
         Session session = sessionFactory.openSession();
         session.beginTransaction();
 
-        /*
+
         Account account1 = new Account();
 
         account1.setAccountId(4526647);
@@ -37,7 +38,7 @@ public class PersistenceTest extends TestCase {
         account1.setVariation(0);
 
         session.save(account1);
-        */
+
 
         Account account2 = new Account();
 
@@ -101,6 +102,8 @@ public class PersistenceTest extends TestCase {
 
         session.getTransaction().commit();
         session.close();
+
+        */
 
 
 
