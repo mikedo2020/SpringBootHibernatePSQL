@@ -3,6 +3,8 @@
 
 http://35.186.178.180
 
+![Scheme](dataflow-diagram.jpeg)
+
 # Use Docker container containing PostgreSql DataBase to store historical fx rates
 
 docker run --name some-postgres -e POSTGRES_PASSWORD=mypassword -d -p 5432:5432 postgres
