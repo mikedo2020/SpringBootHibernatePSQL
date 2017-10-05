@@ -1,5 +1,5 @@
 
-# Spring boot application to expose Foreign Exchange Rates Rest Service
+# Simple Spring boot demo application to expose Foreign Exchange Rates Rest Service
 
 http://35.186.178.180
 
