@@ -1,5 +1,5 @@
 
-# Simple Spring boot demo application to expose Foreign Exchange Rates Rest Service
+# Simple Spring boot demo application to expose Foreign Exchange Rates Rest Service by Michel Doucerain
 
 http://demo-mikedo-angular.online
 
