@@ -1,7 +1,7 @@
 
 # Simple Spring boot demo application to expose Foreign Exchange Rates Rest Service
 
-http://35.186.178.180
+http://demo-mikedo-angular.online
 
 ![Scheme](dataflow-diagram.jpeg)
 
@@ -21,7 +21,7 @@ docker run --name some-postgres -e POSTGRES_PASSWORD=mypassword -d -p 5432:5432 
 
 # To get historical rates go to
 
-http://local.host:8080/fxRates?currencyPair=CADEUR
+http://demo-mikedo-angular.online:8080/fxRates?currencyPair=CADEUR
 
 #here are the available currencies pairs
 #  USDEUR
